@@ -2,6 +2,7 @@ import type { Rule } from '../../types.js';
 import { canonicalRule } from './canonical.js';
 import { htmlLangRule } from './html-lang.js';
 import { metaDescriptionRule } from './meta-description.js';
+import { robotsNoindexRule } from './robots-noindex.js';
 import { titleRule } from './title.js';
 import { viewportRule } from './viewport.js';
 
@@ -12,4 +13,5 @@ export const headRules: Rule[] = [
   canonicalRule,
   htmlLangRule,
   viewportRule,
+  robotsNoindexRule,
 ];
