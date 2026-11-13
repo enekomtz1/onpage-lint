@@ -1,0 +1,9 @@
+dist/
+coverage/
+node_modules/
+package-lock.json
+examples/
+tests/fixtures/
+.claude/
+tarea-byop.md
+docs/FORMULARIO-BYOP.md

@@ -1,0 +1,52 @@
+{
+  "name": "onpage-lint",
+  "version": "0.0.0",
+  "description": "A command-line linter for on-page SEO in static sites.",
+  "license": "MIT",
+  "author": "Eneko Martínez de Morentin Fusco",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enekomtz1/onpage-lint.git"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "onpage-lint": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "seo",
+    "lint",
+    "static-site",
+    "html",
+    "cli"
+  ],
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "domhandler": "^6.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.6",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.10.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.2",
+    "vitest": "^5.1.0"
+  }
+}
