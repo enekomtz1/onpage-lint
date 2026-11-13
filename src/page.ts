@@ -27,7 +27,10 @@ export function createSite(
   pages: readonly Page[],
   files?: Iterable<string>,
 ): SiteContext {
-  const sorted = [...pages].sort((a, b) => a.relativePath.localeCompare(b.relativePath));
+  // Code-point order, not localeCompare: the result must not depend on the machine's locale.
+  const sorted = [...pages].sort((a, b) =>
+    a.relativePath < b.relativePath ? -1 : a.relativePath > b.relativePath ? 1 : 0,
+  );
   return {
     rootDir,
     pages: sorted,
