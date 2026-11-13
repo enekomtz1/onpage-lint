@@ -299,9 +299,14 @@ How links are resolved:
 - A path ending in `/` must have an `index.html` in that directory.
 - Any other path `x` passes if `x`, `x/index.html` or `x.html` exists.
 
-Limitations in v0.1.0: only `<a href>` is checked (not `<img src>`, `<link
-href>` or scripts); fragments are not checked against element ids; `<base
-href>` is ignored.
+Limitations in v0.1.0:
+
+- Only `<a href>` is checked, not `<img src>`, `<link href>` or scripts.
+- Fragments are not checked against element ids.
+- `<base href>` is ignored: relative links are always resolved from the page's
+  own directory.
+- Files inside dot-directories (such as `.well-known/`) are not seen by the
+  linter, so links to them are reported as broken.
 
 Failing (no `contact.html` in the site):
 
