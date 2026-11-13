@@ -93,7 +93,7 @@ describe('textReporter', () => {
   it('never emits ANSI escape codes or trailing whitespace', () => {
     const output = textReporter(report);
 
-    expect(output).not.toMatch(/\u001b\[/);
+    expect(output).not.toContain('\u001b[');
     for (const line of output.split('\n')) {
       expect(line).toBe(line.trimEnd());
     }
