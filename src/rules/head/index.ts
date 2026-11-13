@@ -1,4 +1,5 @@
 import type { Rule } from '../../types.js';
+import { titleRule } from './title.js';
 
 /** Rules about the document head: title, meta tags, canonical, lang. */
-export const headRules: Rule[] = [];
+export const headRules: Rule[] = [titleRule];
