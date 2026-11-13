@@ -1,6 +1,6 @@
 {
   "name": "onpage-lint",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A command-line linter for on-page SEO in static sites.",
   "license": "MIT",
   "author": "Eneko Martínez de Morentin Fusco",
