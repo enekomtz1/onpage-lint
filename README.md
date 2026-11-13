@@ -211,8 +211,16 @@ decisions are recorded in [DECISIONS.md](DECISIONS.md) and changes in
 
 ## Roadmap
 
-See [ROADMAP.md](ROADMAP.md) and the
-[`v1.0` milestone](https://github.com/enekomtz1/onpage-lint/milestone/1).
+The road to v1.0.0 is planned as 18 issues (an estimated 40 hours) in the
+[`v1.0` milestone](https://github.com/enekomtz1/onpage-lint/milestone/1),
+summarized in [ROADMAP.md](ROADMAP.md):
+
+- A config file with per-rule severity, options and ignored paths
+- New rules: `heading-order`, `open-graph`, `hreflang`, `sitemap`, `robots-txt`
+  and `internal-assets`, plus browser-accurate link resolution
+- Columns and source snippets in findings
+- HTML and SARIF reports, and a coloured text report
+- A reusable GitHub Action, publication on npm and a documentation site
 
 ## License
 
